@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace myBanker
 {
-    interface IDebitCard : ICard
+    public interface IExpiryDate
     {
-        void Withdraw(float amount);
+        DateTime ExpiryDate { get; set; }
 
+        void GenExpiryDate();
+
+        bool IsExpired();
     }
 }
